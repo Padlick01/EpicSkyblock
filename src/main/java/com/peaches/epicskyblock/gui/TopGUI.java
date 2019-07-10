@@ -33,9 +33,9 @@ public class TopGUI {
             if (top.size() >= i) {
                 ArrayList<String> lore = new ArrayList<>();
                 Island island = top.get(i - 1);
-                lore.add("&b&l * &7Leader: &b" + island.getOwner());
-                lore.add("&b&l * &7Rank: &b" + i);
-                lore.add("&b&l * &7Value: &b" + island.getValue());
+                lore.add("&b&l * &7Besitzer: &b" + island.getOwner());
+                lore.add("&b&l * &7Rang: &b" + i);
+                lore.add("&b&l * &7Insellevel: &b" + island.getValue());
                 ItemStack head = Utils.makeItem(Material.SKULL_ITEM, 1, 3, "&b&l" + island.getOwner(), Utils.color(lore));
                 SkullMeta m = (SkullMeta) head.getItemMeta();
                 m.setOwner(island.getOwner());
