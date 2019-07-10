@@ -15,13 +15,13 @@ import java.util.List;
 public class GiveCrystalsCommand extends Command {
 
     public GiveCrystalsCommand() {
-        super(new ArrayList<>(Arrays.asList("givecrystals")), "Give a player Crystals", "EpicSkyblock.givecrystals", false);
+        super(new ArrayList<>(Arrays.asList("givecrystals")), "Gebe einem Spieler Inselkristalle", "EpicSkyblock.givecrystals", false);
     }
 
     @Override
     public void execute(CommandSender sender, String[] args) {
         if (args.length != 3) {
-            sender.sendMessage("/is givecrystals <player> <amount>");
+            sender.sendMessage("/is givecrystals <Spieler> <Anzahl>");
             return;
         }
 
@@ -36,7 +36,7 @@ public class GiveCrystalsCommand extends Command {
                         sender.sendMessage(Utils.color(EpicSkyblock.getMessages().giveCrystals.replace("%crystals%", args[2]).replace("%player%", player.getName()).replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
                         player.sendMessage(Utils.color(EpicSkyblock.getMessages().givenCrystals.replace("%crystals%", args[2]).replace("%player%", player.getName()).replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
                     } catch (Exception e) {
-                        sender.sendMessage(args[2] + "is not a number");
+                        sender.sendMessage(args[2] + "ist keine Zahl");
                     }
                 } else {
                     sender.sendMessage(Utils.color(EpicSkyblock.getMessages().playerNoIsland.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
