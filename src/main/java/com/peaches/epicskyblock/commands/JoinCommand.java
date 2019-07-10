@@ -15,13 +15,13 @@ import java.util.List;
 public class JoinCommand extends Command {
 
     public JoinCommand() {
-        super(new ArrayList<>(Arrays.asList("join")),"Join another players island", "", true);
+        super(new ArrayList<>(Arrays.asList("join")),"Trete einer Insel bei", "", true);
     }
 
     @Override
     public void execute(CommandSender sender, String[] args) {
         if (args.length != 2) {
-            sender.sendMessage("/is join <player>");
+            sender.sendMessage("/is join <Spieler>");
             return;
         }
         Player p = (Player) sender;
