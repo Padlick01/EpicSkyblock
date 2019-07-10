@@ -13,7 +13,7 @@ import java.util.List;
 public class SetWarpCommand extends Command {
 
     public SetWarpCommand() {
-        super(new ArrayList<>(Arrays.asList("setwarp", "addwarp")), "Set a new island warp", "", true);
+        super(new ArrayList<>(Arrays.asList("setwarp", "addwarp")), "Setze einen Warp", "", true);
     }
 
     @Override
@@ -28,7 +28,7 @@ public class SetWarpCommand extends Command {
                 p.sendMessage(Utils.color(EpicSkyblock.getMessages().noIsland.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
             }
         } else {
-            p.sendMessage("/is setwarp <Name> (Password)");
+            p.sendMessage("/is setwarp <Name> (Passwort)");
         }
     }
 
