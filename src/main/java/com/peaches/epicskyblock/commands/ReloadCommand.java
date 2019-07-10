@@ -13,7 +13,7 @@ import java.util.List;
 public class ReloadCommand extends Command {
 
     public ReloadCommand() {
-        super(new ArrayList<>(Arrays.asList("reload")), "Reload your configurations","EpicSkyblock.reload", false);
+        super(new ArrayList<>(Arrays.asList("reload")), "Lade Konfiguration neu","EpicSkyblock.reload", false);
     }
 
     @Override
