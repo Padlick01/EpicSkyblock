@@ -14,13 +14,13 @@ import java.util.List;
 public class InviteCommand extends Command {
 
     public InviteCommand() {
-        super(new ArrayList<>(Arrays.asList("invite")), "Invite a player to your island", "", true);
+        super(new ArrayList<>(Arrays.asList("invite")), "Lade einen Spieler auf deine Insel ein", "", true);
     }
 
     @Override
     public void execute(CommandSender sender, String[] args) {
         if (args.length != 2) {
-            sender.sendMessage("/is invite <player>");
+            sender.sendMessage("/is invite <Spieler>");
             return;
         }
         Player p = (Player) sender;
