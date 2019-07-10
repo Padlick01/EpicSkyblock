@@ -14,13 +14,13 @@ import java.util.List;
 public class VisitCommand extends Command {
 
     public VisitCommand() {
-        super(new ArrayList<>(Arrays.asList("visit")), "Visit another players island", "", true);
+        super(new ArrayList<>(Arrays.asList("visit")), "Besuche andere Inseln", "", true);
     }
 
     @Override
     public void execute(CommandSender sender, String[] args) {
         if (args.length != 2) {
-            sender.sendMessage("/is visit <player>");
+            sender.sendMessage("/is visit <Spieler>");
             return;
         }
         Player p = (Player) sender;
