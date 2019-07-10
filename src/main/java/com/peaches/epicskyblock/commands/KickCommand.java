@@ -14,13 +14,13 @@ import java.util.List;
 public class KickCommand extends Command {
 
     public KickCommand() {
-        super(new ArrayList<>(Arrays.asList("kick")), "Kick a player from your island", "", true);
+        super(new ArrayList<>(Arrays.asList("kick")), "Kicke einen Spieler von deiner Insel", "", true);
     }
 
     @Override
     public void execute(CommandSender sender, String[] args) {
         if (args.length != 2) {
-            sender.sendMessage("/is kick <player>");
+            sender.sendMessage("/is kick <Spieler>");
             return;
         }
         Player p = (Player) sender;
