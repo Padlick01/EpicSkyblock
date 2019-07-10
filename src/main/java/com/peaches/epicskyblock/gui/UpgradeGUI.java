@@ -34,36 +34,36 @@ public class UpgradeGUI {
         }
 
         int currentsize = island.getSizeLevel();
-        String sizecost = EpicSkyblock.getConfiguration().size.containsKey(currentsize + 1) ? EpicSkyblock.getConfiguration().size.get(currentsize + 1).getCost() + " Crystals" : "Max Level Reached";
-        List<String> sizeLore = new ArrayList<>(Arrays.asList("&7Need more room to expand? Buy this", "&7upgrade to increase your island size.", "", "&b&lInformation:", "&b&l * &7Current Level: &b" + currentsize, "&b&l * &7Current Size: &b" + EpicSkyblock.getConfiguration().size.get(currentsize).getSize() + "x" + EpicSkyblock.getConfiguration().size.get(currentsize).getSize() + " Blocks", "&b&l * &7Upgrade Cost: &b" + sizecost, "", "&b&lLevels:"));
+        String sizecost = EpicSkyblock.getConfiguration().size.containsKey(currentsize + 1) ? EpicSkyblock.getConfiguration().size.get(currentsize + 1).getCost() + " Inselkristalle" : "Maximales Level erreicht";
+        List<String> sizeLore = new ArrayList<>(Arrays.asList("&7Du benötigst mehr Platz zum expandieren? Kaufe dieses", "&7Upgrade um die Inselgröße zu erhöhen.", "", "&b&lInformation:", "&b&l * &7Aktuelles Level: &b" + currentsize, "&b&l * &7Aktuelle Größe: &b" + EpicSkyblock.getConfiguration().size.get(currentsize).getSize() + "x" + EpicSkyblock.getConfiguration().size.get(currentsize).getSize() + " Blöcke", "&b&l * &7Upgrade-Kosten: &b" + sizecost, "", "&b&lLevel:"));
         for (int level : EpicSkyblock.getConfiguration().size.keySet()) {
-            sizeLore.add("&b&l * &7Level " + level + ": &b" + EpicSkyblock.getConfiguration().size.get(level).getSize() + "x" + EpicSkyblock.getConfiguration().size.get(level).getSize() + " Blocks");
+            sizeLore.add("&b&l * &7Level " + level + ": &b" + EpicSkyblock.getConfiguration().size.get(level).getSize() + "x" + EpicSkyblock.getConfiguration().size.get(level).getSize() + " Blöcke");
         }
         sizeLore.add("");
-        sizeLore.add("&b&l[!] &bRight Click to Purchase this Upgrade");
-        this.size = Utils.makeItem(Material.GRASS, 1, 0, "&b&lIsland Size", Utils.color(sizeLore));
+        sizeLore.add("&b&l[!] &bRechtsklick um das Upgrade zu kaufen");
+        this.size = Utils.makeItem(Material.GRASS, 1, 0, "&b&lInselgröße", Utils.color(sizeLore));
 
 
         int currentmember = island.getMemberLevel();
-        String membercost = EpicSkyblock.getConfiguration().member.containsKey(currentmember + 1) ? EpicSkyblock.getConfiguration().member.get(currentmember + 1).getCost() + " Crystals" : "Max Level Reached";
-        List<String> memberLore = new ArrayList<>(Arrays.asList("&7Need more members? Buy this", "&7upgrade to increase your member count.", "", "&b&lInformation:", "&b&l * &7Current Level: &b" + currentmember, "&b&l * &7Current Members: &b" + EpicSkyblock.getConfiguration().member.get(currentmember).getSize() + " Members", "&b&l * &7Upgrade Cost: &b" + membercost, "", "&b&lLevels:"));
+        String membercost = EpicSkyblock.getConfiguration().member.containsKey(currentmember + 1) ? EpicSkyblock.getConfiguration().member.get(currentmember + 1).getCost() + " Inselkristalle" : "Maximales Level erreicht";
+        List<String> memberLore = new ArrayList<>(Arrays.asList("&7? Kaufe dieses", "&7Upgrade um die maximale Mitgliederanzahl zu erhöhen", "", "&b&lInformation:", "&b&l * &7Aktuelles Level: &b" + currentmember, "&b&l * &7Aktuelle Mitglieder: &b" + EpicSkyblock.getConfiguration().member.get(currentmember).getSize() + " Mitglieder", "&b&l * &7Upgrade-Kosten: &b" + membercost, "", "&b&lLevel:"));
         for (int level : EpicSkyblock.getConfiguration().member.keySet()) {
-            memberLore.add("&b&l * &7Level " + level + ": &b" + EpicSkyblock.getConfiguration().member.get(level).getSize() + " Members");
+            memberLore.add("&b&l * &7Level " + level + ": &b" + EpicSkyblock.getConfiguration().member.get(level).getSize() + " Mitglieder");
         }
         memberLore.add("");
-        memberLore.add("&b&l[!] &bRight Click to Purchase this Upgrade");
-        this.member = Utils.makeItem(Material.ARMOR_STAND, 1, 0, "&b&lIsland Member Count", Utils.color(memberLore));
+        memberLore.add("&b&l[!] &bRechtsklick um das Upgrade zu kaufen");
+        this.member = Utils.makeItem(Material.ARMOR_STAND, 1, 0, "&b&lInselmitglieder", Utils.color(memberLore));
 
 
         int currentwarp = island.getWarpLevel();
-        String warpcost = EpicSkyblock.getConfiguration().warp.containsKey(currentwarp + 1) ? EpicSkyblock.getConfiguration().warp.get(currentwarp + 1).getCost() + " Crystals" : "Max Level Reached";
-        List<String> warpLore = new ArrayList<>(Arrays.asList("&7Need more island warps? Buy this", "&7upgrade to increase your warp count.", "", "&b&lInformation:", "&b&l * &7Current Level: &b" + currentwarp, "&b&l * &7Current Warps: &b" + EpicSkyblock.getConfiguration().warp.get(currentwarp).getSize() + " Warps", "&b&l * &7Upgrade Cost: &b" + warpcost, "", "&b&lLevels:"));
+        String warpcost = EpicSkyblock.getConfiguration().warp.containsKey(currentwarp + 1) ? EpicSkyblock.getConfiguration().warp.get(currentwarp + 1).getCost() + " Kristalle" : "Maximales Level erreicht";
+        List<String> warpLore = new ArrayList<>(Arrays.asList("&7Du benötigst mehr Warps? Kaufe dieses", "&7Upgrade um die maximale Anzahl an Warps zu erhöhen", "", "&b&lInformation:", "&b&l * &7Aktuelles Level: &b" + currentwarp, "&b&l * &7Aktuelle Warps: &b" + EpicSkyblock.getConfiguration().warp.get(currentwarp).getSize() + " Warps", "&b&l * &7Upgrade-Kosten: &b" + warpcost, "", "&b&lLevel:"));
         for (int level : EpicSkyblock.getConfiguration().warp.keySet()) {
             warpLore.add("&b&l * &7Level " + level + ": &b" + EpicSkyblock.getConfiguration().warp.get(level).getSize() + " Warps");
         }
         warpLore.add("");
-        warpLore.add("&b&l[!] &bRight Click to Purchase this Upgrade");
-        this.warp = Utils.makeItem(Material.ENDER_PORTAL_FRAME, 1, 0, "&b&lIsland Warp", Utils.color(warpLore));
+        warpLore.add("&b&l[!] &bRechtsklick um das Upgrade zu kaufen");
+        this.warp = Utils.makeItem(Material.ENDER_PORTAL_FRAME, 1, 0, "&b&lInselwarp", Utils.color(warpLore));
         inventory.setItem(10, size);
         inventory.setItem(13, member);
         inventory.setItem(16, warp);
