@@ -13,14 +13,14 @@ import java.util.List;
 public class AboutCommand extends Command {
 
     public AboutCommand() {
-        super(new ArrayList<>(Arrays.asList("about", "version")), "Displays plugin info", "", false);
+        super(new ArrayList<>(Arrays.asList("about", "version")), "Zeigt Plugin Informationen", "", false);
     }
 
     @Override
     public void execute(CommandSender sender, String[] args) {
         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&8Plugin Name: &7EpicSkyblock"));
         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&8Plugin Version: &7" + EpicSkyblock.getInstance().getDescription().getVersion()));
-        sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&8Plugin Author: &7Peaches_MLG"));
+        sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&8Plugin Autor: &7Peaches_MLG"));
     }
 
     @Override
